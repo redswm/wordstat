@@ -2,7 +2,7 @@
     'use strict';
 
     // ==========================================
-    // 1. ИНИЦИАЛИЗАЦИЯ И НАБЛЮДАТЕЛЬ (REACT)
+    // 1. ИНИЦИАЛИЗАЦИЯ И НАБЛЮДАТЕЛЬ (REACT) 
     // ==========================================
     function inject() {
         const wrap = document.querySelector('.save-button__wrapper');
