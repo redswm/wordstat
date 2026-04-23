@@ -1,0 +1,62 @@
+/* === Компактный режим Wordstat === */
+.main { margin-top: 0 !important; padding-top: 0 !important; }
+
+/* Скрываем оригинальную панель (так как вынесли кнопки в #ws-custom-wrap) */
+.save-button__wrapper { display: none !important; }
+
+.wordstat, .table, .service-header__main { margin-top: 0 !important; }
+.wordstat__search-wrapper { margin: 0 !important; }
+.wordstat__view-types { margin: 8px 0 !important; font-size: 14px !important; }
+.wordstat__content-preview { margin-bottom: 8px; }
+.wordstat__content-preview-text_first { display: none; }
+
+/* === Wordstat Tools === */
+.ws-btn {
+    margin-right: 6px !important;
+    margin-bottom: 6px;
+    transition: none !important;
+    transform: none !important;
+}
+.ws-clear-btn { min-width: 36px; }
+.ws-copy-btn.ws-green { background: #4caf50 !important; color: #fff !important; border-color: #4caf50 !important; }
+.ws-copy-btn.ws-gray { background: #e0e0e0 !important; color: #757575 !important; border-color: #ccc !important; }
+
+.ws-form {
+    position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    background: #fff; padding: 20px; border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2); z-index: 99999;
+    display: none; flex-direction: column; gap: 12px;
+    max-width: 90vw; font-family: 'YS Text', Arial, sans-serif; box-sizing: border-box;
+}
+#ws-stop-form { width: 500px; height: 400px; }
+#ws-stats-form { width: 600px; height: 500px; }
+.ws-form h4 { margin: 0; font-size: 16px; font-weight: 600; }
+.ws-form textarea {
+    width: 100%; flex: 1; padding: 10px; border: 1px solid #ccc;
+    border-radius: 6px; font-size: 14px; resize: none;
+    font-family: monospace; line-height: 1.4; box-sizing: border-box;
+}
+.ws-form-actions { display: flex; gap: 8px; justify-content: flex-end; }
+.ws-btn-cancel { padding: 8px 16px; border: 1px solid #ccc; background: #f5f5f5; border-radius: 6px; cursor: pointer; }
+.ws-btn-primary { padding: 8px 16px; border: none; background: #197eea; color: #fff; border-radius: 6px; cursor: pointer; }
+.ws-btn-outline { padding: 8px 16px; border: 1px solid #197eea; background: #fff; color: #197eea; border-radius: 6px; cursor: pointer; }
+.ws-stats-content { flex: 1; overflow: auto; border: 1px solid #eee; border-radius: 6px; padding: 10px; font-family: monospace; font-size: 14px; line-height: 1.6; }
+.ws-stats-row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dashed #eee; }
+.ws-stats-empty { text-align: center; color: #888; padding: 20px; }
+
+/* === Контейнер кнопок === */
+#ws-custom-wrap {
+    display: block;
+    margin: 0;
+    padding: 8px 0;
+    line-height: 1;
+}
+
+/* === Уведомления === */
+#ws-notify {
+    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    background: #222; color: #fff; padding: 12px 20px; border-radius: 10px;
+    font-size: 14px; z-index: 100000; box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    transition: opacity 0.2s; opacity: 0; pointer-events: none;
+}
+#ws-notify.ws-show { opacity: 1; }
